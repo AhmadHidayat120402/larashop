@@ -576,7 +576,7 @@
         </ul>
       </div>
 
-      <div class="sidebar-footer">
+      {{-- <div class="sidebar-footer">
         <hr class="separator mb-0" />
         <div class="sidebar-footer-content">
           <h6 class="text-uppercase">
@@ -595,6 +595,6 @@
             <div class="progress-bar progress-bar-warning" style="width: 65%;" role="progressbar"></div>
           </div>
         </div>
-      </div>
+      </div> --}}
     </div>
   </aside>
