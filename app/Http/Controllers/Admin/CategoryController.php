@@ -14,7 +14,9 @@ class CategoryController extends Controller
     public function index()
     {
         $data =  Category::orderBy('name', 'ASC')->paginate(10);
-        return view('admin.categories.index',['data' => $data]);
+        return view('admin.categories.index',['data' => $data,
+        'title' => 'Data category'
+    ]);
     }
 
     /**
@@ -22,7 +24,9 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.categories.create',[
+            'title' => 'Create Category',
+        ]);
     }
 
     /**
@@ -30,7 +34,7 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -44,7 +48,7 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
         //
     }
@@ -52,7 +56,7 @@ class CategoryController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request,$id)
     {
         //
     }
@@ -60,7 +64,7 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy( $id)
     {
         //
     }

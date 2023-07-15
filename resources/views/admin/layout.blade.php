@@ -11,7 +11,7 @@
     <!-- theme meta -->
     <meta name="theme-name" content="sleek" />
 
-    <title>Ecommerce - Sleek Admin Dashboard Template</title>
+    <title>{{$title}}</title>
 
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500"
@@ -21,6 +21,8 @@
 
     <!-- PLUGINS CSS STYLE -->
     <link href="assets/plugins/simplebar/simplebar.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
 
     {{-- <link href="{{URL::asset('admin/assets/plugins/nprogress/nprogress.css')}}" rel="stylesheet" /> --}}
     <link href="{{ URL::asset('admin/assets/plugins/nprogress/nprogress.css') }}" rel="stylesheet" />
@@ -118,6 +120,7 @@
     </script> -->
 
     <!-- Javascript -->
+
     <script src="{{ URL::asset('admin/assets/plugins/jquery/jquery.min.js') }}"></script>
     <script src="{{ URL::asset('admin/assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ URL::asset('admin/assets/plugins/simplebar/simplebar.min.js') }}"></script>
@@ -133,6 +136,10 @@
     <script src="{{ URL::asset('admin/assets/js/sleek.js') }}"></script>
     <link href='{{ URL::asset('admin/assets/options/optionswitch.css') }}' rel='stylesheet'>
     <script src="{{ URL::asset('admin/assets/options/optionswitcher.js') }}"></script>
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+    @stack('script');
 </body>
 
 </html>
