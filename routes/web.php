@@ -27,7 +27,15 @@ Route::get('/', function () {
 
 Route::prefix('admin')->group(function () {
     Route::get('dashboard',[DashboardController::class,'index'])->name('admin');
-    Route::resource('categories',CategoryController::class);
+    // Route::resource('categories',CategoryController::class);
+    Route::get('categories',[CategoryController::class,'index'])->name('categoriesAll');
+
+    Route::get('/categories/create', [CategoryController::class, 'create']);
+    Route::post('/categories', [CategoryController::class, 'store']);
+    Route::get('/categories/{id}/edit', [CategoryController::class, 'edit']);
+    Route::put('/categories/{id}', [CategoryController::class, 'update']);
+    Route::delete('/categories/{id}', [CategoryController::class, 'destroy']);
+
 });
 
 

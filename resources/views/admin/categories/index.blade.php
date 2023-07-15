@@ -61,7 +61,7 @@
                         <td>{{ $m->parent_id }}</td>
                         <td>
                             <div class="d-flex align-items-center gap-1" style="color: white;">
-                                <a href="/menu/{{ $m->id }}/edit"
+                                <a href="/admin/categories/{{ $m->id }}"
                                     class="btn btn-warning btn-sm" style="color: white;">
                                     <i class="fa-solid fa-pen-to-square"></i> Edit</a>
                                 <form action="/menu/{{ $m->id }}" method="post" class="delete-form">

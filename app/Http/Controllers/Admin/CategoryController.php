@@ -13,7 +13,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $data =  Category::orderBy('name', 'ASC')->paginate(10);
+        $data =  Category::orderBy('name', 'DESC')->paginate(10);
         return view('admin.categories.index',['data' => $data,
         'title' => 'Data category'
     ]);
@@ -34,7 +34,9 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-
+        $data = $request->all();
+        Category::create($data);
+        return redirect('admin/categories');
     }
 
     /**
@@ -42,7 +44,7 @@ class CategoryController extends Controller
      */
     public function show(string $id)
     {
-        //
+
     }
 
     /**
@@ -50,7 +52,11 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Category::findOrfail($id);
+        return view('admin.categories.edit', [
+            'title' => 'edit category',
+            'data' => $data
+        ]);
     }
 
     /**
